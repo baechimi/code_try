@@ -3,7 +3,7 @@ package september;
 public class Reverse_Integer_7 {
     public static int reverse(int x) 
     {
-        int result = 0;
+    	int result = 0;
         int fu = 1;
         if(x<0)
         {
@@ -16,13 +16,20 @@ public class Reverse_Integer_7 {
         {
         	restr = restr + xstr.charAt(i);
         }
-        result = Integer.parseInt(restr) * fu;
+        try
+        {
+        	result = Integer.parseInt(restr) * fu;
+        }
+        catch(Exception e)
+        {
+        	result = 0;
+        }
         return result;
     }
     
     public static void main(String[] arg)
     {
-    	int xx = -32443;
+    	int xx = 1534236469;
     	int re = reverse(xx);
     	System.out.println(re);
     }
